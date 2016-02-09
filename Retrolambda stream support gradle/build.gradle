@@ -1,0 +1,49 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+
+   dependencies {
+     classpath 'me.tatarka:gradle-retrolambda:3.2.4'
+     
+  }
+}
+
+apply plugin: 'java'
+apply plugin: 'application'
+apply plugin: 'me.tatarka.retrolambda'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+     compile 'net.sourceforge.streamsupport:streamsupport-flow:1.4'
+  }
+
+
+mainClassName = "Main"
+
+jar {
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+}
+
+retrolambda {
+  jdk System.getenv("JAVA8_HOME")
+  oldJdk System.getenv("JAVA7_HOME")
+  javaVersion JavaVersion.VERSION_1_7
+  defaultMethods false
+  incremental true
+}
+
+task runApp(type: JavaExec) {
+  classpath = sourceSets.main.runtimeClasspath
+
+  main = 'Main'
+}
+task buildscriptDependencies << {
+    println project.buildscript.configurations.classpath.asPath
+}
