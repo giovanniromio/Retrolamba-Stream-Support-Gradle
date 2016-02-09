@@ -1,7 +1,6 @@
 package org.gradle;
 
 
-
 import java.util.Set;
 
 
