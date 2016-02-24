@@ -1,11 +1,7 @@
-package org.gradle;
-
-
+import java.util.List;
 import java.util.Set;
 
-
-import java8.util.stream.Collectors;
-import java8.util.stream.LongStreams;
+import java8.util.stream.*;
 
 public class Main {
 
