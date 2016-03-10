@@ -35,13 +35,14 @@ retrolambda {
   jdk System.getenv("JAVA8_HOME")
   oldJdk System.getenv("JAVA7_HOME")
   javaVersion JavaVersion.VERSION_1_7
-  defaultMethods false
-  incremental true
+  defaultMethods true
+  incremental false
 }
 
 task runApp(type: JavaExec) {
   classpath = sourceSets.main.runtimeClasspath
-  main = 'org.gradle.Main'
+  //main = 'org.gradle.Main'
+  main = 'defaultInterfaceMethod.Vita'
 }
 task buildscriptDependencies << {
     println project.buildscript.configurations.classpath.asPath
