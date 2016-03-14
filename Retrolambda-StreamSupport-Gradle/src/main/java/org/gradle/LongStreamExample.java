@@ -16,7 +16,7 @@ import java8.util.stream.LongStreams;
  *		3) Select Task Quick Launcher
  *		4) Type runApp and execute that command
  */
-public class Main {
+public class LongStreamExample {
 
 	public static void main(String [] args){
 		/*

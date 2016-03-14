@@ -9,7 +9,7 @@ public class Uomo implements Persona {
 	}
 
 	public void increaseAge() {
-		Persona.increaseAge(this.age);
+		Personas.increaseAge(this.age);
 	}
 
 }

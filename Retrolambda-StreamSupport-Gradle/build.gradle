@@ -44,7 +44,7 @@ jar {
 task runApp(type: JavaExec) {
   classpath = sourceSets.main.runtimeClasspath
   //main = 'org.gradle.Main'
-  main = 'defaultInterfaceMethod.Vita'
+  main = 'org.gradle.CollectionStreamExample'
 }
 task buildscriptDependencies << {
     println project.buildscript.configurations.classpath.asPath
