@@ -1,4 +1,4 @@
-package defaultInterfaceMethod;
+package factoryPattern;
 
 public class Uomo implements Persona {
 
@@ -7,6 +7,9 @@ public class Uomo implements Persona {
 	public Uomo(int age) {
 		this.age = age;
 	}
-		
-	
+
+	public void increaseAge() {
+		Persona.increaseAge(this.age);
+	}
+
 }

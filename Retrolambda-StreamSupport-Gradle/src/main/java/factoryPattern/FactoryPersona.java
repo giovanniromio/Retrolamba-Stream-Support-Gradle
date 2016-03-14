@@ -1,7 +1,6 @@
-package defaultInterfaceMethod;
+package factoryPattern;
 
-public interface Persona {
-
+public class FactoryPersona {
 	public static Uomo createUomo(int age) {
 		return new Uomo(age);
 	}
